@@ -51,15 +51,17 @@ Então não é que o Linux é mais complexo, mas sim que o Windows esconde melho
 Sim e não, isso varia muito de qual distro você escolheu, mas num geral se você for um usuário que vai apenas abrir o navegador, calculadora e editores de texto, não vai ser necessário nenhum contato com o terminal mas qualquer coisa fora da utilização mínima do sistema já te coloca na mira do terminal.
 Mas não entre em pânico, nos dias de hoje muita coisa é simplificada e 90% das coisas vão ser tipo:
 
-<cite>- Hummm não sei como fazer isso no linux<cite/>
+>-- Hummm não sei como fazer isso no linux
 
-**faz pesquisa marota no google**  
-**acha um stackoverflow**   
-**copia um código de uma resposta**  
-~~busca entender aquilo que copiou antes de colar no terminal~~  
-**cola e executa no terminal** ~~com sudo~~  
-💥 **bummm** 💥  
-✨ **works just like magic** ✨  
+E então você resolve assim:
+
+>**faz pesquisa marota no google**  
+>**acha um link do stackoverflow**   
+>**copia um código de uma resposta**  
+>~~busca entender aquilo que copiou antes de colar no terminal~~  
+>**cola no terminal e executa** ~~com sudo~~
+
+E então ✨ **works just like magic** ✨.
 
 Fique frio, tudo começa pequeno e vai ganhando forma com o tempo, vamos começar com os comandos básicos do sistema:
 
@@ -84,7 +86,7 @@ Fique frio, tudo começa pequeno e vai ganhando forma com o tempo, vamos começa
 Devemos começar nos desapegando do sistema padrão de gerenciamento de usuários do windows, lá você sendo o administrador é um passe livre para faça tudo.
 Já no linux vai ser comum você tentar acessar/modificar algo e o linux te responder:
 
-<cite>- Você não tem permissão para mexer aqui mané</cite>
+> Você não tem permissão.
 
 Talvez você fique meio chateado, por que afinal, você é o único usuário daquele computador, e as vezes até mesmo o dono do computador e derrepente você não tem permissão pra mexer no seus próprios arquivos? E quem é que tem então?
 
