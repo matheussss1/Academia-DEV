@@ -12,10 +12,10 @@
 <img src="./images/distros_linux.png" alt="Distribuições Linux" width="500" style="margin-bottom: 20px"/>
 
 Linux se refere ao kernel (núcleo) de Sistema Operacional, criado por Linus Torvalds, em 1991.  
-O termo Linux também é utilizado para se referenciar aos sistemas operacionais que fazem uso do kernel Linux, porém, deve-se lembrar que um **_Sistema Operacional Linux_** na verdade é uma distribuição Linux, composta de diversos outros softwares (Sheel¹, Bootloader², etc) acompanhados do kernel Linux.
+O termo Linux também é utilizado para se referenciar aos sistemas operacionais que fazem uso do kernel Linux, porém, deve-se lembrar que um **_Sistema Operacional Linux_** na verdade é uma distribuição Linux, composta de diversos outros softwares (Shell¹, Bootloader², etc) acompanhados do kernel Linux.
 
 <sub>¹ _Shell - Em tradução literal significa casca, mas no Linux é conhecido como um interpretador de comandos, sendo o mais comum o Bash._</sub>  
-<sub>² _Bootloader: Trata-se de um pequeno programa, como exemplo temos o grub2, que é um geren- ciador de inicialização, responsável por carregar o sistema operacional na memória, processo co- nhecido como boot._ </sub>
+<sub>² _Bootloader: Trata-se de um pequeno programa, como exemplo temos o grub2, que é um gerenciador de inicialização, responsável por carregar o sistema operacional na memória, processo conhecido como boot._ </sub>
 
 
 ### Kernel?
@@ -176,4 +176,5 @@ Vamos entender o que significa esses caracteres (r, w, x, -) :
 `group` -  Leitura e execução
 `demais usuários` - Leitura e execução
 
-É possível alterar as permissões utilizando o comando `chmod`
+É possível alterar as permissões utilizando o comando `chmod`.   
+Também é possível alterar o dono e o grupo utilizando o comando `chown`.
