@@ -184,3 +184,19 @@ Vamos entender o que significa esses caracteres (r, w, x, -) :
 É possível alterar as permissões utilizando o comando `chmod`.   
 Também é possível alterar o dono e o grupo utilizando o comando `chown`.  
 Veremos mais sobre isso posteriormente.
+
+3 - Contagem de links
+
+4 - `owner`
+
+5 - `group`
+
+6 - Tamanho do arquivo/diretório em bytes
+
+7 - Mês de criação/modificação
+
+8 - Dia de criação/modificação
+
+9 - Hora de criação/modificação
+
+10 - Nome
