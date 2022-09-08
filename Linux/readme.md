@@ -49,7 +49,7 @@ Então não é que o Linux é mais complexo, mas sim que o Windows esconde melho
 
 ## É tudo no terminal?
 
-Sim e não, isso varia muito de qual distro você escolheu, mas num geral se você for um usuário que vai apenas abrir o navegador, calculadora e editores de texto, não vai ser necessário nenhum contato com o terminal mas qualquer coisa fora da utilização mínima do sistema já te coloca na mira do terminal.
+Sim e não, isso varia muito de qual distro você escolheu, mas num geral se você for um usuário que vai apenas abrir o navegador, calculadora e editores de texto, não vai ser necessário nenhum contato com o terminal, mas, qualquer coisa fora da utilização mínima do sistema já te coloca na mira do terminal.
 Mas não entre em pânico, nos dias de hoje muita coisa é simplificada e 90% das coisas vão ser tipo:
 
 >-- Hummm não sei como fazer isso no linux
@@ -87,6 +87,7 @@ Fique frio, tudo começa pequeno e vai ganhando forma com o tempo, vamos começa
 |`cd`| Acessa uma determinada pasta (diretório)|
 |`mkdir`| Cria um diretório|
 |`df`| Mostra a quantidade de espaço usada no disco rígido|
+|`free`|Mostra a quantidade de espaço usada em memória RAM|
 |`top`| Mostra os processos rodando|
 |`rm`| Remove um arquivo/diretório|
 |`cat`| Exibe arquivos|
@@ -134,8 +135,8 @@ O console solicita a sua senha e ✨ *como mágica* ✨  é criado uma nova past
 
 Mas peraí...
 
-Quer dizer que qualquer é só eu ter um usuário, digitar a minha senha e posso fazer tudo? Afinal, e a questão da segurança?
+Quer dizer que qualquer é só eu ter um usuário, digitar a senha do usuário e posso fazer tudo? Afinal, e a questão da segurança?
 
 Esse é um ponto importante.  
 O que acontece, na realidade, é que o usuário que instalou o sistema operacional na máquina tem direitos de executar comandos como administrador, pois, teoricamente ele é responsável pela máquina, concorda? Por isso, ele pode executar comandos com o `sudo`.  
-Se você posteriormente pensar em criar um novo usuário no PC, vai perceber que ele não vai conseguir executar comandos com `sudo` (a não ser que você configure o novo usuário para isso, mas isso é outra história ;) )
+Se você posteriormente pensar em criar um novo usuário no PC, vai perceber que ele não vai conseguir executar comandos com `sudo` (a não ser que você configure o novo usuário para isso 😙)
