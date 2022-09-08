@@ -170,10 +170,10 @@ A cada 3 caracteres, forma-se um conjunto de permissões:
  E por último, mas não menos importante, os 3 ultimos dizem respeito aos demais usuários
 
 Vamos entender o que significa esses caracteres (r, w, x, -):  
- `r` - Leitura 
- `w` - Gravação 
- `x` - Execução
- `-` - Permissão desabilitada
+ `r` - Leitura  
+ `w` - Gravação  
+ `x` - Execução  
+ `-` - Permissão desabilitada  
 
  Dito isso, podemos dizer que o diretório `Desktop` por exemplo, possui as seguintes permissões:
 
