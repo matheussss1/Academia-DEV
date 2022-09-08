@@ -175,14 +175,17 @@ Vamos entender o que significa esses caracteres (r, w, x, -):
  `w` - Gravação  
 
  `x` - Execução  
- 
+
  `-` - Permissão desabilitada  
 
  Dito isso, podemos dizer que o diretório `Desktop` por exemplo, possui as seguintes permissões:
 
-`owner` - Leitura, gravação e execução
-`group` -  Leitura e execução
-`demais usuários` - Leitura e execução
+`owner` - Leitura, gravação e execução  
+
+`group` -  Leitura e execução  
+
+`demais usuários` - Leitura e execução  
+
 
 É possível alterar as permissões utilizando o comando `chmod`.   
 Também é possível alterar o dono e o grupo utilizando o comando `chown`.
