@@ -227,3 +227,6 @@ Manter essas informações localmente acelera o processo de busca, porque você 
 
 Então é comum que antes de instalar um programa específico, por exemplo o docker, você tenha que instalar o repositório aonde o docker está, veja um exemplo da própria documentação do docker:
 <img src="./images/repositorio_docker.png" alt=""/>
+
+
+E em um resumo muito simplista é isso, seria impossível descrever todas as funcionalidade e opcões que você vai encontrar utilizando ambientes Linux, porém, espero que tenha servido de base para retirar algumas duvidas!
