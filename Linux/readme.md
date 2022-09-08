@@ -182,8 +182,7 @@ Vamos entender o que significa esses caracteres (r, w, x, -) :
 `demais usuários` - Leitura e execução
 
 É possível alterar as permissões utilizando o comando `chmod`.   
-Também é possível alterar o dono e o grupo utilizando o comando `chown`.  
-Veremos mais sobre isso posteriormente.
+Também é possível alterar o dono e o grupo utilizando o comando `chown`.
 
 3 - Contagem de links
 
@@ -200,3 +199,31 @@ Veremos mais sobre isso posteriormente.
 9 - Hora de criação/modificação
 
 10 - Nome
+
+## Instalando/Atualizando programas
+
+Antes de mais nada é preciso saber que temos opções para instalar programas via interface gráfica, mas como gostamos do terminal agora, iremos fazer tudo pelo terminal
+
+Especificamente no Ubuntu (uma das centenas de distribuições linux) temos um comando chamdo `apt`.  
+A definção para `apt`é : `Advanced Package Tool`, simplificando, uma ferramenta para adicionar/remover/atualizar pacotes (programas)
+
+Dentro de um terminal podemos executar `sudo apt update`, para atualizar tudo que tiver disponivel para atualizar no sistema, ou então `sudo apt update <nome do pacote>` para atualizar algum pacote específico.
+Alem de `update` podemos utilizar `install` para instalar algum pacote, ou então `remove` para remover algum pacote e `purge` para remover tudo, incluindo arquivos de configuração do pacote.
+
+Ok... mas de onde vem os pacotes baixados?  
+Aí é que mora a mágica, precisamos entender o conceito de **_Repositórios de pacotes_**.
+
+Um repositório nada mais é que um servidor que contém um conjunto de software. O Ubuntu fornece um conjunto de repositórios para que você não precise procurar na internet pelo arquivo de instalação de vários softwares de sua necessidade. Essa forma centralizada de fornecer software é um dos principais pontos fortes do uso do Linux.  
+O gerenciador de pacotes APT obtém as informações do repositório do arquivo /etc/apt/sources.list e arquivos listados no diretório /etc/apt/sources.list.d. As informações do repositório geralmente estão no seguinte formato:  
+
+`deb http://us.archive.ubuntu.com/ubuntu/dists/bionic main`  
+
+Você pode inclusive [acessar o repositório para ver como ele está estruturado](http://us.archive.ubuntu.com/)
+
+Quando você atualiza o Ubuntu usando o comando `apt update`, o gerenciador de pacotes `apt` obtém as informações sobre os pacotes disponíveis (e suas informações de versão) dos repositórios e armazena-os no cache local.  
+Você pode ver isso no diretório `/var/lib/apt/lists`.
+
+Manter essas informações localmente acelera o processo de busca, porque você não precisa percorrer a rede e pesquisar no banco de dados de pacotes disponíveis apenas para verificar se um determinado pacote está disponível ou não.
+
+Então é comum que antes de instalar um programa específico, por exemplo o docker, você tenha que instalar o repositório aonde o docker está, veja um exemplo da própria documentação do docker:
+<img src="./images/repositorio_docker.png" alt=""/>
