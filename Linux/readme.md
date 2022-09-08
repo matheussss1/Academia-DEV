@@ -186,19 +186,19 @@ Também é possível alterar o dono e o grupo utilizando o comando `chown`.
 
 3 - Contagem de links
 
-4 - `owner`
+4 - `owner` do item
 
-5 - `group`
+5 - `group` do item
 
-6 - Tamanho do arquivo/diretório em bytes
+6 - Tamanho do item em bytes
 
-7 - Mês de criação/modificação
+7 - Mês de criação/modificação do item
 
-8 - Dia de criação/modificação
+8 - Dia de criação/modificação do item
 
-9 - Hora de criação/modificação
+9 - Hora de criação/modificação do item
 
-10 - Nome
+10 - Nome do item
 
 ## Instalando/Atualizando programas
 
