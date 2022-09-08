@@ -15,6 +15,7 @@ Linux se refere ao kernel (núcleo) de Sistema Operacional, criado por Linus Tor
 O termo Linux também é utilizado para se referenciar aos sistemas operacionais que fazem uso do kernel Linux, porém, deve-se lembrar que um **_Sistema Operacional Linux_** na verdade é uma distribuição Linux, composta de diversos outros softwares (Sheel¹, Bootloader², etc) acompanhados do kernel Linux.
 
 <sub>¹ _Shell - Em tradução literal significa casca, mas no Linux é conhecido como um interpretador de comandos, sendo o mais comum o Bash._</sub>
+
 <sub>² _Bootloader: Trata-se de um pequeno programa, como exemplo temos o grub2, que é um geren- ciador de inicialização, responsável por carregar o sistema operacional na memória, processo co- nhecido como boot._ </sub>
 
 
