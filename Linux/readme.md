@@ -153,10 +153,15 @@ Vamos dissecar esse print:
 <img src="./images/lsl_dissecado.png" alt=""/>
 
 
-1 - Tipo, os mais comuns são `l`, `d` ou `-`
+1 - Tipo do item listado. Os mais comuns são `l`, `d` ou `-`
 -  `l` Um tipo especial chamado [*symlink*](https://medium.com/@dbacon338/what-is-the-difference-between-a-hard-link-and-a-symbolic-link-6f1e56a2317b#.vf838n1qa) 
 -  `d` Um diretório
--  `-` Um arquivo  
+-  `-` Um arquivo normal 
+-  `b` Arquivo de bloco
+-  `c` Arquivo especial de caractere
+-  `p` Canal
+-  `s` Socket
+
 
 2 - Conhecido como conjunto de 3 caracteres, na sequência, indica as permissões de `leitura`, `gravação` e `execução`, para `owner`, `group` e `demais usuários`. (*Todo arquivo/diretório possui um `group` e um `owner`*)  
 A cada 3 caracteres, forma-se um conjunto de permissões:
@@ -177,4 +182,5 @@ Vamos entender o que significa esses caracteres (r, w, x, -) :
 `demais usuários` - Leitura e execução
 
 É possível alterar as permissões utilizando o comando `chmod`.   
-Também é possível alterar o dono e o grupo utilizando o comando `chown`.
+Também é possível alterar o dono e o grupo utilizando o comando `chown`.  
+Veremos mais sobre isso posteriormente.
