@@ -140,3 +140,40 @@ Quer dizer que qualquer é só eu ter um usuário, digitar a senha do usuário e
 Esse é um ponto importante.  
 O que acontece, na realidade, é que o usuário que instalou o sistema operacional na máquina tem direitos de executar comandos como administrador, pois, teoricamente ele é responsável pela máquina, concorda? Por isso, ele pode executar comandos com o `sudo`.  
 Se você posteriormente pensar em criar um novo usuário no PC, vai perceber que ele não vai conseguir executar comandos com `sudo` (a não ser que você configure o novo usuário para isso 😙)
+
+Começaremos primeiro entendendo as permissões de arquivos/diretórios
+
+Iremos para `~/` e então executamos `ls`, que nos retornará os arquivos pastas daquele diretório, repare que após `ls` utilizamos a opção `-l`, que serivirá para mostrar informações extras.
+
+<img src="./images/permissoes_pasta.png" alt=""/>
+
+A primeira vista fica difícil entender né?  
+Vamos dissecar esse print:  
+
+<img src="./images/lsl_dissecado.png" alt=""/>
+
+
+1 - Tipo, os mais comuns são `l`, `d` ou `-`
+-  `l` Um tipo especial chamado [*symlink*](https://medium.com/@dbacon338/what-is-the-difference-between-a-hard-link-and-a-symbolic-link-6f1e56a2317b#.vf838n1qa) 
+-  `d` Um diretório
+-  `-` Um arquivo  
+
+2 - Conhecido como conjunto de 3 caracteres, na sequência, indica as permissões de `leitura`, `gravação` e `execução`, para `owner`, `group` e `demais usuários`. (*Todo arquivo/diretório possui um `group` e um `owner`*)  
+A cada 3 caracteres, forma-se um conjunto de permissões:
+ Os três primeiros dizem respeito ao `owner` (o dono do arquivo ou diretório)
+ Na sequência vem os que dizem respeito ao `group` ao qual o usuário pertence
+ E por último, mas não menos importante, os 3 ultimos dizem respeito aos demais usuários
+
+Vamos entender o que significa esses caracteres (r, w, x, -) :
+ `r` - Leitura 
+ `w` - Gravação 
+ `x` - Execução
+ `-` - Permissão desabilitada
+
+ Dito isso, podemos dizer que o diretório `Desktop` por exemplo, possui as seguintes permissões:
+
+`owner` - Leitura, gravação e execução
+`group` -  Leitura e execução
+`demais usuários` - Leitura e execução
+
+É possível alterar as permissões utilizando o comando `chmod`
