@@ -169,7 +169,7 @@ A cada 3 caracteres, forma-se um conjunto de permissões:
  Na sequência vem os que dizem respeito ao `group` ao qual o usuário pertence
  E por último, mas não menos importante, os 3 ultimos dizem respeito aos demais usuários
 
-Vamos entender o que significa esses caracteres (r, w, x, -) :
+Vamos entender o que significa esses caracteres (r, w, x, -):  
  `r` - Leitura 
  `w` - Gravação 
  `x` - Execução
