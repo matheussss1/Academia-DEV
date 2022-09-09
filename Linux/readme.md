@@ -97,6 +97,79 @@ Fique frio, tudo começa pequeno e vai ganhando forma com o tempo, vamos começa
 
 [Veja mais comandos aqui](https://www.devmedia.com.br/comandos-importantes-linux/23893)
 
+É interessante observar que quase todos os comandos linux esperam `flags` de opções e/ou aceitam `parâmetros`.
+
+Um exemplo bem simples de se compreender:  
+O comando `man` aceita um parametro `name`
+> stags@primary:~$ `man` `name`
+
+no lugar de name passaremos o nome do comando que queremos ver no manual, como por exemplo: `cat`
+
+>stags@primary:~$ `man cat`
+
+
+após a execução do comando, o modo leitura do terminal começaram e poderemos ver a seguinte tela:
+
+<img src="./images/man_cat.png" alt=""/>
+
+Consegue perceber? executamos o comando `man` passando `cat` como parametro.
+
+Ok... mas e as `flags`?  
+Bom, as flags seriam as opções que eu dou para que o terminal execute o mesmo comando mas com algumas mudanças no `output`, por exemplo a `flag` `-f`, que fará com que o terminal retorne apenas uma descrição do comando, ao invés de todo o manual em modo de leitura:
+
+<img src="./images/man_f_cat.png"/>
+
+perceba como fica a sintaxe:
+
+>stags@primary:~$ `comando [...FLAGS] [...PARAMETROS]`
+
+Ok.. entendi... mas e se por acaso eu tiver que executar um comando muito grande, passando caminho de arquivos, url de sites com diversas flags e tals... preciso fazer tudo em uma única linha?  
+**Não**, com a barra inversa `\` podemos quebrar linhas no terminal, ao digitar `\` e apertar `Enter` automaticamente você terá uma quebra de linha para continuar executando seus comandos :  
+
+<img src="./images/mancontrabarra.png" alt=""/>
+
+Também temos a barra vertical (pipe) `|`, oq esse cara faz?  
+Bom, lembra quando falamos que os comandos em sua maioria aceitam parametros?  
+Então, lembre também que ao executar alguns comandos, podemos ter algo de volta. 
+Como por exemplo ler um arquivo, digitamos `cat arquivo_exemplo.txt` e no terminal cuspirá o conteudo desse arquivo:
+
+> stags@primary:~$ `cat arquivo_exemplo.txt`
+>  
+> stags@primary:~$ `Lorem ipsum blablabla...`   <-- output do comando
+
+Imagine agora que queremos o resultado de um comando seja o parametro de um outro comando.  
+De uma maneira ~~burra~~ não inteligente seria:
+> Roda o primeiro comando
+> Copia o resultado
+> Roda outro comando colando o resultado como parametro
+
+Meio improdutivo né? É aí que a barra vertical `|` entra em jogo.  
+Observe um exemplo:
+
+<img src="./images/lswcl.png" alt=""/>
+
+O que o comando ls faz? Lista os arquivos/pastas dentro do diretório.
+O que o comando wc faz? `wc - contador de palavra, linhas, caracter e bytes`
+O que a `flag` `-l` em wc faz? `wc -l  - conta o numero de linhas de um output`
+
+Então oq está acontecendo aqui?  
+Bom, o comando ls está retornando algo como:
+
+> stags@primary:~$ ls
+>
+> Desktop
+> Downloads
+> Picture
+> ....
+>
+
+Uma listagem do diretório, certo?  
+Então com o pipe `|` nos pegamos esse `output`e passamos para o comando `wc` como parametro.  
+Podemos imaginar algo como:
+> stags@primary:~$ `ls | wc -l [RESULTADO DO COMANDO ANTERIOR]`
+
+E assim podemos encadear comandos infinitamente.
+
 
 ## Usuários, Grupos e Permissões
 
@@ -120,7 +193,7 @@ Um usuário de sistema é um usuário fictício que é criado durante a instala�
 
 Todos os usuários conseguem listar o conteúdos dos diretórios, mas somente o usuário ROOT pode criar arquivos e/ou pastas em um diretório diferente de seu diretório pessoal. Isso quer dizer que, seu eu quiser logar no sistema com um usuário comum, somente poderei criar arquivos e/ou pastas em meu diretório pessoal, ou seja, o diretório `/home/usuário`.  
 Entretanto, o Linux permite que o usuário que instalou o sistema na máquina execute comandos como ROOT, como criar pastas ou arquivos em diretórios diferentes de sua pasta pessoal.
-Para executar um comando como ROOT, basta digitar o comando sudo antes do comando que queremos executar como ROOT, vamos a um exemplo:
+Para executar um comando como ROOT, basta digitar o comando `sudo` antes do comando que queremos executar como ROOT, vamos a um exemplo:
 
 
 Criando uma pasta em um diretório diferente do diretório pessoal:
@@ -143,7 +216,7 @@ Se você posteriormente pensar em criar um novo usuário no PC, vai perceber que
 
 Começaremos primeiro entendendo as permissões de arquivos/diretórios
 
-Iremos para `~/` e então executamos `ls`, que nos retornará os arquivos pastas daquele diretório, repare que após `ls` utilizamos a opção `-l`, que serivirá para mostrar informações extras.
+Iremos para `~/` e então executamos `ls`, que nos retornará os arquivos/pastas daquele diretório, repare que após `ls` utilizamos a `flag` `-l`, que serivirá para mostrar informações extras.
 
 <img src="./images/permissoes_pasta.png" alt=""/>
 
@@ -205,6 +278,56 @@ Também é possível alterar o dono e o grupo utilizando o comando `chown`.
 9 - Hora de criação/modificação do item
 
 10 - Nome do item
+
+## Modificando permissões e grupos
+
+Como citado anteriormente podemos modificar permissões/grupos com `chmod`/`chown`.  
+🚨Esses são os comandos que devemos ter **muito** cuidado ao utilizar, já que o uso errado do comando pode acabar liberando acesso para modificações em qualquer item/diretório do sistema para qualquer usuário.🚨
+
+
+#### chmod
+A sintaxe para o comando é a seguinte:
+> stags@primary:~$ `chmod [PERMISSÕES] [...ARQUIVOS]`
+
+Ao analizarmos as permissões de um diretório nos exemplos acima, vimos os `conjuntos de permissões` que eram composto por caracteres, e representavam permissões.  
+Saiba que podemos também expressar essas permissões em números, compare com a tabela a seguir:
+
+|Permissão|Numero|Caracter|
+|--------|-------|-------|
+|`Nenhuma permissão`|`0`|`-`|
+|`Apenas executar`|`1`|`- - x`|
+|`Apenas gravar`|`2`|`- w -`|
+|`Gravar e executar`|`3`|`- w x`|
+|`Apenas ler`|`4`|`r - -`|
+|`Apenas ler e executar`|`5`|`r - x`|
+|`Apenas ler e gravar`|`6`|`r w -`|
+|`Todas as permissões`|`7`|`r w x`|
+
+_**Não se esqueça que para um arquivo temos sempre 3 entidades**_  
+_**`owner`, `group` e `demais usuários`**_
+
+Então como descreveriamos tanto em numeros como caracteres que um arquivo possúi as seguinte caracteristicas?
+
+- O `owner` pode ler, escrever e executar
+- O `group` pode ler e executar
+- `Demais usuários` não podem fazer nada
+
+Em  números ficaria `750`, em caracteres seria `rwxr-x---`  
+Qual fica mais simples? Na minha opinião seria com números!
+
+Vamos para um exemplo:
+
+<img src="./images/permissontestetxt.png" alt=""/>
+
+Ao verificar as permissões de `teste.txt` vemos que possuímos a seguinte configuração:  
+`rw-rw-r--`, que traduzindo seria:  
+- O `owner` pode ler e escrever
+- O `group` pode ler e escrever
+- `Demais usuário` podem apenas ler
+
+e se quisessemos que `Demais usuários` não pudessem fazer nada?
+
+
 
 ## Instalando/Atualizando programas
 
