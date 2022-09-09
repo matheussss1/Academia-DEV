@@ -1,12 +1,12 @@
-#### Antes de qualquer coisa, um disclaimer é necessário:
+## Disclaimer:
 
-- É preciso ter interesse em aprender.
-- Decorar não adianta, ninguém se sustenta dessa forma
-- Seja curioso
-- Não se compare aos outros, perceba a sua evolução
-- Não é possível aprender tudo da noite pro dia
+- **É necessário ter interesse em aprender**
+- **Decorar não adianta, ninguém se sustenta dessa forma**
+- **Seja curioso**!
+- **Não se compare aos outros, perceba a sua evolução**
+- **Não é possível aprender tudo da noite pro dia**
 
-# Linux - Bem vindo ao Open Source 🐧
+# Linux - Bem vindo ao Open Source! 🐧
 
 ## O que é Linux?
 <img src="./images/distros_linux.png" alt="Distribuições Linux" width="500" style="margin-bottom: 20px"/>
@@ -97,7 +97,7 @@ Fique frio, tudo começa pequeno e vai ganhando forma com o tempo, vamos começa
 
 [Veja mais comandos aqui](https://www.devmedia.com.br/comandos-importantes-linux/23893)
 
-É interessante observar que quase todos os comandos linux esperam `flags` de opções e/ou aceitam `parâmetros`.
+É interessante observar que quase todos os comandos linux podem receber `flags` de opções e/ou aceitam `parâmetros`.
 
 Um exemplo bem simples de se compreender:  
 O comando `man` aceita um parametro `name`
@@ -108,14 +108,14 @@ no lugar de name passaremos o nome do comando que queremos ver no manual, como p
 >stags@primary:~$ `man cat`
 
 
-após a execução do comando, o modo leitura do terminal começaram e poderemos ver a seguinte tela:
+o modo leitura do terminal começa:
 
 <img src="./images/man_cat.png" alt=""/>
 
-Consegue perceber? executamos o comando `man` passando `cat` como parametro.
+Consegue perceber? executamos o **comando** `man` passando `cat` como **parametro**.
 
 Ok... mas e as `flags`?  
-Bom, as flags seriam as opções que eu dou para que o terminal execute o mesmo comando mas com algumas mudanças no `output`, por exemplo a `flag` `-f`, que fará com que o terminal retorne apenas uma descrição do comando, ao invés de todo o manual em modo de leitura:
+Bom, as flags seriam as opções que eu dou para que o terminal execute o mesmo comando mas com algumas mudanças no `output`, por exemplo, a `flag` `-f` do **comando**  `man`, que fará com que o terminal retorne apenas uma descrição do comando, ao invés de todo o manual em modo de leitura:
 
 <img src="./images/man_f_cat.png"/>
 
@@ -123,34 +123,21 @@ perceba como fica a sintaxe:
 
 >stags@primary:~$ `comando [...FLAGS] [...PARAMETROS]`
 
-Ok.. entendi... mas e se por acaso eu tiver que executar um comando muito grande, passando caminho de arquivos, url de sites com diversas flags e tals... preciso fazer tudo em uma única linha?  
-**Não**, com a barra inversa `\` podemos quebrar linhas no terminal, ao digitar `\` e apertar `Enter` automaticamente você terá uma quebra de linha para continuar executando seus comandos :  
+Mais do que executar comandos, temos caracteres especiais que acabam facilitando a nossa vida conforme vamos utilizando o terminal.
+Um bom exemplo é a barra invertida `\`, que acompanhada da tecla `Enter`, resultara em uma quebra de linha no terminal, apenas.
+
 
 <img src="./images/mancontrabarra.png" alt=""/>
 
-Também temos a barra vertical (pipe) `|`, oq esse cara faz?  
-Bom, lembra quando falamos que os comandos em sua maioria aceitam parametros?  
-Então, lembre também que ao executar alguns comandos, podemos ter algo de volta. 
-Como por exemplo ler um arquivo, digitamos `cat arquivo_exemplo.txt` e no terminal cuspirá o conteudo desse arquivo:
-
-> stags@primary:~$ `cat arquivo_exemplo.txt`
->  
-> stags@primary:~$ `Lorem ipsum blablabla...`   <-- output do comando
-
-Imagine agora que queremos o resultado de um comando seja o parametro de um outro comando.  
-De uma maneira ~~burra~~ não inteligente seria:
-> Roda o primeiro comando
-> Copia o resultado
-> Roda outro comando colando o resultado como parametro
-
-Meio improdutivo né? É aí que a barra vertical `|` entra em jogo.  
-Observe um exemplo:
+Também temos a barra vertical (pipe) `|`.  
+Que passa o retorno de um comando, como parametro para o próximo argumento.  
+Imagine agora que queremos o resultado de um comando seja o parametro de um outro comando:
 
 <img src="./images/lswcl.png" alt=""/>
 
-O que o comando ls faz? Lista os arquivos/pastas dentro do diretório.
-O que o comando wc faz? `wc - contador de palavra, linhas, caracter e bytes`
-O que a `flag` `-l` em wc faz? `wc -l  - conta o numero de linhas de um output`
+O que o comando ls faz? `ls - Lista arquivos/pastas dentro do diretório.`  
+O que o comando wc faz? `wc - contador de palavra, linhas, caracter e bytes`  
+O que a `flag` `-l` em wc faz? `wc -l  - conta o numero de linhas de um output`  
 
 Então oq está acontecendo aqui?  
 Bom, o comando ls está retornando algo como:
