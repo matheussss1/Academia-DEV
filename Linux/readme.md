@@ -115,43 +115,26 @@ o modo leitura do terminal começa:
 Consegue perceber? executamos o **comando** `man` passando `cat` como **parametro**.
 
 Ok... mas e as `flags`?  
-Bom, as flags seriam as opções que eu dou para que o terminal execute o mesmo comando mas com algumas mudanças no `output`, por exemplo, a `flag` `-f` do **comando**  `man`, que fará com que o terminal retorne apenas uma descrição do comando, ao invés de todo o manual em modo de leitura:
+Bom, as flags seriam as opções para que o terminal execute o comando com mudanças no `output`, por exemplo, a `flag` `-f` do **comando**  `man` fará com que o terminal retorne apenas uma descrição do comando, ao invés de todo o manual em modo de leitura:
 
 <img src="./images/man_f_cat.png"/>
 
-perceba como fica a sintaxe:
+Perceba como fica a sintaxe:
 
 >stags@primary:~$ `comando [...FLAGS] [...PARAMETROS]`
 
-Mais do que executar comandos, temos caracteres especiais que acabam facilitando a nossa vida conforme vamos utilizando o terminal.
-Um bom exemplo é a barra invertida `\`, que acompanhada da tecla `Enter`, resultara em uma quebra de linha no terminal, apenas.
+O terminal aceita caracteres especiais que acabam facilitando a nossa vida, um bom exemplo é a barra invertida `\`, que acompanhada da tecla `Enter`, resultara em uma quebra de linha no terminal, apenas.
 
 
 <img src="./images/mancontrabarra.png" alt=""/>
 
-Também temos a barra vertical (pipe) `|`.  
+Também tem a barra vertical (pipe) `|`.  
 Que passa o retorno de um comando, como parametro para o próximo argumento.  
-Imagine agora que queremos o resultado de um comando seja o parametro de um outro comando:
+Um exemplo seria utilizando o **comando** `ls` para listar o diretório + o **comando** `wc` para contar as linhas de um output:
 
 <img src="./images/lswcl.png" alt=""/>
 
-O que o comando ls faz? `ls - Lista arquivos/pastas dentro do diretório.`  
-O que o comando wc faz? `wc - contador de palavra, linhas, caracter e bytes`  
-O que a `flag` `-l` em wc faz? `wc -l  - conta o numero de linhas de um output`  
-
-Então oq está acontecendo aqui?  
-Bom, o comando ls está retornando algo como:
-
-> stags@primary:~$ ls
->
-> Desktop
-> Downloads
-> Picture
-> ....
->
-
-Uma listagem do diretório, certo?  
-Então com o pipe `|` nos pegamos esse `output`e passamos para o comando `wc` como parametro.  
+Assim conseguiremos contar quantos itens (arquivos/pastas) temos no diretório aonde o ls foi executado.  
 Podemos imaginar algo como:
 > stags@primary:~$ `ls | wc -l [RESULTADO DO COMANDO ANTERIOR]`
 
@@ -161,13 +144,13 @@ E assim podemos encadear comandos infinitamente.
 ## Usuários, Grupos e Permissões
 
 Uma das coisas que torna o Sistema Operacional Linux seguro, é a  exigência de que arquivo no sistema tenha dono e permissões de uso.  
-Então acaba sendo comum você tentar acessar/modificar algo e o linux te responder:
+Então acaba sendo comum você tentar acessar/criar/modificar algo e o linux te responder:
 
 > Você não tem permissão.
 
 Talvez você fique meio chateado, por que afinal, você é o único usuário daquele computador, e as vezes até mesmo o dono do computador e derrepente você não tem permissão pra mexer no seus próprios arquivos? E quem é que tem então?  
 
-No linux existem 3 tipos de usuário, o de sistema, o ROOT e o comum.
+É importante entender que em um ambiente Linux existem 3 tipos de usuários, o de sistema, o ROOT e o comum.
 
 Um usuário ROOT é o usuário com permissão total de utilização do sistema. Esse usuário pode criar pastas/arquivos em qualquer diretório, além de poder editar e excluir qualquer arquivo de qualquer usuário.  
 Esse usuário pode executar, também, qualquer comando disponível no sistema operacional.
@@ -238,14 +221,13 @@ Vamos entender o que significa esses caracteres (r, w, x, -):
 
  `-` - Permissão desabilitada  
 
- Dito isso, podemos dizer que o diretório `Desktop` por exemplo, possui as seguintes permissões:
+Dito isso, podemos dizer que o diretório `Desktop` por exemplo, possui as seguintes permissões:
 
-`owner` - Leitura, gravação e execução  
-
-`group` -  Leitura e execução  
-
-`demais usuários` - Leitura e execução  
-
+>`owner` - `Leitura, gravação e execução`  
+>
+>`group` -  `Leitura e execução`  
+>
+>`demais usuários` - `Leitura e execução`  
 
 É possível alterar as permissões utilizando o comando `chmod`.   
 Também é possível alterar o dono e o grupo utilizando o comando `chown`.
@@ -269,7 +251,7 @@ Também é possível alterar o dono e o grupo utilizando o comando `chown`.
 ## Modificando permissões e grupos
 
 Como citado anteriormente podemos modificar permissões/grupos com `chmod`/`chown`.  
-🚨Esses são os comandos que devemos ter **muito** cuidado ao utilizar, já que o uso errado do comando pode acabar liberando acesso para modificações em qualquer item/diretório do sistema para qualquer usuário.🚨
+🚨  Devemos ter **muito** cuidado ao utilizar, já que o uso errado desses comandos podem acabar liberando acesso para modificações em qualquer item/diretório do sistema para qualquer usuário, ou então bloqueando acesso a um recurso da maquina que precisa ser consumido por uma outra aplicação.
 
 
 #### chmod
@@ -290,7 +272,7 @@ Saiba que podemos também expressar essas permissões em números, compare com a
 |`Apenas ler e gravar`|`6`|`r w -`|
 |`Todas as permissões`|`7`|`r w x`|
 
-_**Não se esqueça que para um arquivo temos sempre 3 entidades**_  
+_**Não se esqueça que para qualquer arquivo/pasta temos sempre 3 entidades**_  
 _**`owner`, `group` e `demais usuários`**_
 
 Então como descreveriamos tanto em numeros como caracteres que um arquivo possúi as seguinte caracteristicas?
@@ -300,7 +282,6 @@ Então como descreveriamos tanto em numeros como caracteres que um arquivo poss�
 - `Demais usuários` não podem fazer nada
 
 Em  números ficaria `750`, em caracteres seria `rwxr-x---`  
-Qual fica mais simples? Na minha opinião seria com números!
 
 Vamos para um exemplo:
 
@@ -312,9 +293,42 @@ Ao verificar as permissões de `teste.txt` vemos que possuímos a seguinte confi
 - O `group` pode ler e escrever
 - `Demais usuário` podem apenas ler
 
-e se quisessemos que `Demais usuários` não pudessem fazer nada?
+e se quisessemos que `Demais usuários` **pudessem fazer tudo**?  
+
+<img src="./images/chmod667.png" alt=""/>
+
+Ao verificar novamente as permissões de `teste.txt` vemos que possuímos a configuração `rw-rw-rwx`, que traduzindo seria:  
+- O `owner` pode ler e escrever
+- O `group` pode ler e escrever
+- `Demais usuário` podem fazer tudo.
 
 
+Quero que você perceba que tivemos que passar permissão para `owner` (6), `group`(6) e então `demais usuários` (7).  
+Poderiamos também alterar diretamente as permissões **apenas** de `demais usuários` diretamente:
+
+<img src="./images/chmodespecifico.png" alt=""/>
+
+**_Dica: crie arquivos e diretórios. Em seguida, teste a combinação de permissões com chmod. Isso lhe ajudará muito no entendimento deste recurso._**
+
+#### chown
+
+A sintaxe básica para o comando é a seguinte:
+> stags@primary:~$ `chown [...FLAGS] owner:group [...ARQUIVOS]`
+
+com esse comando, específicamos quem será o owner e quem será o grupo daquele arquivo/diretório.
+
+Um exemplo:
+
+<img src="./images/lslchown.png" alt=""/>
+
+
+Com `ls -l` vemos que a pasta `snap` tem o `owner` como `ubuntu` e o group como `ubuntu`.    
+
+Queremos então mudar o `owner` para stags, faremos isso com `chown stags:ubuntu ./snap`:
+
+<img src="./images/chownlslstags.png" alt=""/>
+
+E com um outro `ls -l` vemos que agora o `owner` de `snap`é `stags`e não mais `ubuntu`.
 
 ## Instalando/Atualizando programas
 
@@ -343,6 +357,3 @@ Manter essas informações localmente acelera o processo de busca, porque você 
 
 Então é comum que antes de instalar um programa específico, por exemplo o docker, você tenha que instalar o repositório aonde o docker está, veja um exemplo da própria documentação do docker:
 <img src="./images/repositorio_docker.png" alt=""/>
-
-
-E em um resumo muito simplista é isso, seria impossível descrever todas as funcionalidade e opcões que você vai encontrar utilizando ambientes Linux, porém, espero que tenha servido de base para retirar algumas duvidas!
