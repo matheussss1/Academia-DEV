@@ -1,4 +1,26 @@
-## Disclaimer:
+
+
+ [![General badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-f-carvalho/) [![General badge](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)](/)
+
+## Intro:
+
+Esse documento foi escrito na intenção de dar um norte a pessoas **iniciantes** no linux.  
+Nesse texto você verá conceitos básicos mas essenciais para entender como utilizamos ambientes linux.  
+Por hora o texto incluí os seguintes tópicos:
+
+- [O que é Linux?](#oqelinux)
+  - [Kernel?](#kernel)
+  - [Estrutura de diretórios do Linux](#estruturadirlinux)
+  - [É tudo no terminal?](#etudonoterminal)
+- [Usuários, Grupos e Permissões](#usuariosgrupospermissoes)
+  - [Modificando permissões e grupos](#modificandopermissoesegrupos)
+  - [chmod](#chmod)
+  - [chown](#chown)
+- [Instalando/Atualizando programas](#instalandoatualizando)
+
+_**Sinta-se livre para contribuir com o readme**_
+
+Antes do inicio leitura, um disclaimer é necessário:
 
 - **É necessário ter interesse em aprender**
 - **Decorar não adianta, ninguém se sustenta dessa forma**
@@ -6,9 +28,10 @@
 - **Não se compare aos outros, perceba a sua evolução**
 - **Não é possível aprender tudo da noite pro dia**
 
-# Linux - Bem vindo ao Open Source! 🐧
+# Bem vindo ao Linux 🐧
 
-## O que é Linux?
+
+## <a name="oqelinux">O que é Linux?</a>
 <img src="./images/distros_linux.png" alt="Distribuições Linux" width="500" style="margin-bottom: 20px"/>
 
 Linux se refere ao kernel (núcleo) de Sistema Operacional, criado por Linus Torvalds, em 1991.  
@@ -18,12 +41,11 @@ O termo Linux também é utilizado para se referenciar aos sistemas operacionais
 <sub>² _Bootloader: Trata-se de um pequeno programa, como exemplo temos o grub2, que é um gerenciador de inicialização, responsável por carregar o sistema operacional na memória, processo conhecido como boot._ </sub>
 
 
-### Kernel?
-
+### <a name="kernel">Kernel?</a>
 Software que controla como será usado o processador, a memória, o disco e periféricos.  
 É o software presente em todo sistema operacional que determina como o computador deve funcionar.
 
-##  Estrutura de diretórios do Linux
+## <a name="estruturadirlinux" id="estruturadirlinux">Estrutura de diretórios do Linux</a>
 
 O Linux segue uma filosofia diferente da estrutura de arquivos, a primeira vista assusta pois em um ambiente Windows temos o diretório `C://` como pasta raiz do sistema e então as pastas do sistema são apresentadas de forma mais amigável, como `Usuários`, `Arquivos e Programas` e `Windows`.  
 Então não é que o Linux é mais complexo, mas sim que o Windows esconde melhor as coisas de você 😙.
@@ -47,7 +69,7 @@ Então não é que o Linux é mais complexo, mas sim que o Windows esconde melho
 |`/usr`| Diretório de arquivos pertencentes aos usuários e a segunda maior hierarquia de diretórios no Linux.|
 |`/var`| Diretório onde são guardadas informações variáveis ao sistema, como arquivos de logs etc… `|
 
-## É tudo no terminal?
+## <a name="etudonoterminal" id="etudonoterminal">É tudo no terminal?</a>
 
 Sim e não, isso varia muito de qual distro você escolheu, mas num geral se você for um usuário que vai apenas abrir o navegador, calculadora e editores de texto, não vai ser necessário nenhum contato com o terminal, mas, qualquer coisa fora da utilização mínima do sistema já te coloca na mira do terminal.
 Mas não entre em pânico, nos dias de hoje muita coisa é simplificada e 90% das coisas vão ser tipo:
@@ -141,8 +163,7 @@ Podemos imaginar algo como:
 E assim podemos encadear comandos infinitamente.
 
 
-## Usuários, Grupos e Permissões
-
+## <a name="usuariosgrupospermissoes" id="usuariosgrupospermissoes"> Usuários, Grupos e Permissões</a>
 Uma das coisas que torna o Sistema Operacional Linux seguro, é a  exigência de que arquivo no sistema tenha dono e permissões de uso.  
 Então acaba sendo comum você tentar acessar/criar/modificar algo e o linux te responder:
 
@@ -248,13 +269,12 @@ Também é possível alterar o dono e o grupo utilizando o comando `chown`.
 
 10 - Nome do item
 
-## Modificando permissões e grupos
-
+## <a name="modificandopermissoesegrupos" id="modificandopermissoesegrupos">Modificando permissões e grupos</a>
 Como citado anteriormente podemos modificar permissões/grupos com `chmod`/`chown`.  
 🚨  Devemos ter **muito** cuidado ao utilizar, já que o uso errado desses comandos podem acabar liberando acesso para modificações em qualquer item/diretório do sistema para qualquer usuário, ou então bloqueando acesso a um recurso da maquina que precisa ser consumido por uma outra aplicação.
 
 
-#### chmod
+#### <a name="chmod" id="chmod">chmod</a>
 A sintaxe para o comando é a seguinte:
 > stags@primary:~$ `chmod [PERMISSÕES] [...ARQUIVOS]`
 
@@ -310,8 +330,7 @@ Poderiamos também alterar diretamente as permissões **apenas** de `demais usu�
 
 **_Dica: crie arquivos e diretórios. Em seguida, teste a combinação de permissões com chmod. Isso lhe ajudará muito no entendimento deste recurso._**
 
-#### chown
-
+#### <a name="chown" id="chown">chown</a>
 A sintaxe básica para o comando é a seguinte:
 > stags@primary:~$ `chown [...FLAGS] owner:group [...ARQUIVOS]`
 
@@ -331,6 +350,7 @@ Queremos então mudar o `owner` para stags, faremos isso com `chown stags:ubuntu
 E com um outro `ls -l` vemos que agora o `owner` de `snap`é `stags`e não mais `ubuntu`.
 
 ## Instalando/Atualizando programas
+## <a name="instalandoatualizando" id="instalandoatualizando">Instalando/Atualizando programas</a>
 
 Antes de mais nada é preciso saber que temos opções para instalar programas via interface gráfica, mas como gostamos do terminal agora, iremos fazer tudo pelo terminal
 
