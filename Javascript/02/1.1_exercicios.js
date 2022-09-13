@@ -43,4 +43,6 @@
  * 20 - Como podemos acessar um valor em um objeto?
  *
  * 21 - Em suas palavras, explique a diferença entre listas e objetos
+ * 
+ * 22 - Em suas palavras, diferencie tipo de dado de estrutura de dado.
  */
