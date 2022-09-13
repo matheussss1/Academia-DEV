@@ -103,6 +103,8 @@ let grauMiopia = 5.25;
 
 console.log(typeof grauMiopia) // -> "number"
 
+let numeroInfinito = Infinity; // -> representação do infinito
+
 
 /**
  * Temos também o tipo boleano, ou boolean em ingles
