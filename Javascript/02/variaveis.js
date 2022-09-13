@@ -74,6 +74,14 @@ idade = 22;
 idade = "teste alterando valor";
 idade = 50;
 
+//podemos usar também numeros negativos:
+
+let animoParaIrPraAcademia = -40;
+
+// e numeros com pontos flutuantes:
+
+let grauMiopia = 5.25;
+
 /**
  * Temos também o tipo boleano, ou boolean em ingles
  * utilizado para representar true/false (verdadeiro, falso)
@@ -108,6 +116,11 @@ let jatinhoParticular = null;
 let variavelSemValor;
 
 console.log(variavelSemValor) // -> undefined
+
+/**
+ * Até agora conhecemos todos (ou quase todos) 
+ * os tipos **PRIMITIVOS** do Javascript
+ */
 
 
 /**
@@ -182,46 +195,221 @@ console.log(listaDeCompras[0]) // -> "Macarrão"
  * Mas o array pode ser preenchido com qualquer tipo:
  */
 
+let numerosDaMega = [20, 37, 10, 76, 54, 21];
+let numerosAcertados = [true, true, true, true, true, true];
+
+//Ou até mesmo outros arrays, formando matrizes n-dimensionais
+
+let matriz = [ [1,2,3], [4,5,6], [7,8,9] ];
+
+//perceba que:
+
+console.log(matriz[0]) // -> [1, 2, 3]
+console.log(matriz[2]) // -> [7, 8, 9]
+console.log(matriz[0][0]) // -> 1
+console.log(matriz[0][2]) // -> 3
+console.log(matriz[2][1]) // -> 8
+
+/**
+ * Agora ao acessar o index zero, o valor retornado é um array
+ * perceba que você acessou um index de um array e ele te retornou outro array
+ * então significa que podemos utilizar mais "acessadores de index"
+ * 
+ * matriz[ACESSADOR_DE_NIVEL_1][ACESSADOR_DE_NIVEL_2]
+ * 
+ * ou programaticamente correto: 
+ * 
+ * matriz[ACESSADOR_DE_NIVEL_0][ACESSADOR_DE_NIVEL_1]
+ * .
+ * .
+ * .
+ * .
+ * .
+ * .
+ * foi apenas uma piada, mas se você entendeu, está no caminho certo :)
+ */
 
 
+/**
+ * Uma duvida que pode ter surgido:
+ * 
+ * É possível utilizar o "acessador de index"
+ * em outra estrutura de dado que não seja o `array`?
+ * 
+ * SIM, mas talvez seja meio confuso:
+ */
 
+let testeDeAcessoEmUmaString = "Stags";
 
+console.log(testeDeAcessoEmUmaString[2]) // -> "a"
 
+/**
+ * Bom, se você tiver uma intuição forte
+ * vai perceber que acessamos apenas a letra "a" dentro 
+ * da `string` que declaramos.
+ * 
+ * Ok... posso viver com isso... mas... Por que?
+ * 
+ * Sabe qual um sinimo para `palavra`?
+ * 
+ * "Cadeia de caracter"
+ * .
+ * .
+ * .
+ * .
+ * .
+ * 
+ * Vou te contar um segredo:
+ * 
+ * Strings são arrays.... PRONTO FALEI!
+ * 
+ * imagine que ao declarar `let nome = "stags"`
+ * 
+ * na verdade o que temos é `let nome = ["s", "t", "a", "g" ,"s"]`
+ * 
+ * Mas não se preocupe, isso é coisa que vale mais pro computador
+ * do que para nós, programadores. Apenas é bom saber como as coisas 
+ * realmente funcionam e entender do motivo de podermos acessar
+ * os indexes de uma string.
+ * 
+ * 
+ * ..... então quer dizer que:
+ */
 
+let matrizString = ["stags", "teste"];
 
-let inexistente = null;
+console.log(matrizString[0][2]) // -> "a"
 
+// é, eu sei. programação né!
 
+/**
+ * Ok, já entendemos bem sobre listas
+ * mas quero que você foque em uma coisa,
+ * apesar de termos o valor "Macarrão", dentro 
+ * da variavel `listaDeCompras`, não temos mais informações
+ * sobre o produto, não sabemos o preço que ele tem/pode ter
+ * não temos a quantidade do produto.
+ * 
+ * Tudo bem, as vezes realmente não precisamos de tantas informações.
+ * 
+ * Mas e se quisermos?
+ * 
+ * É ai que entra um outro tipo de estrutura de dados:
+ * 
+ * o Objeto.
+ * 
+ * veja uma demonstração da sintaxe:
+ */
 
-let listaVazia = [];
-
-let listaMercado = [
-  "maça",
-  "uva",
-  "macarrão",
-  "carne moída",
-];
-
-let numerosDaMega = [
-  20,
-  35,
-  02,
-  60,
-];
-
-
-
-
-var objeto = {};
-
-var usuario = {
-  chave: "valor",
-  nome: "stags",
+const objetoPessoa = {
+  
+  nome: "Stags",
+  
   idade: 21,
-  peso: 50,
-  vivo: true,
-}; //pode ser lido como dicionário em outras linguagens
+  
+  filhos: null,
+  
+  animaisEstimacao: ["Cachorro", "Gato"],
+  
+  temAlergia: false,
+  
+  renda = {
+    emprego: 15000,
+    projetoPessoal: 500,
+    pensao: 200 
+  }
+
+};
+
+/**
+ * Consegue perceber?
+ * 
+ * Ao inves de brackets []
+ * temos chaves {}
+ * 
+ * ao invés de um valor único, temos uma chave descritiva,
+ * chamada de `propriedade`, e logo após temos um valor,
+ * que pode ser de qualquer outro tipo que vimos até agora,
+ * inclusive, o valor pode ser ou objeto também.
+ * 
+ * 
+ * Ok... pra acessar o valor eu já sei!
+ * 
+ * 
+ * É só fazer: console.log(objetoPessoa[0]);
+ * 
+ * E terei o retorno da `propriedade` nome, que é stags.
+ * Certo?
+ * 
+ * NÃO.
+ * 
+ * Em um termo mais técnico, objetos não são `indexaveis`,
+ * não possuem index mas sim as chaves de acesso, que no caso,
+ * são as propriedades.
+ * 
+ * Então como poderiamos obter o valor de `nome` em `objetoPessoa`?
+ */
+
+console.log(objetoPessoa.nome) // -> "stags";
+
+// Ou então:
+
+console.log(objetoPessoa["nome"]) // -> "stags";
+
+// Veja mais exemplos:
+
+//Isso:
+console.log(objetoPessoa["animaisEstimacao"][0]) // -> "Cachorro"
+console.log(objetoPessoa["renda"]["emprego"]) // -> 15000
+console.log(objetoPessoa["renda"]["emprego"]) // -> 15000
+
+//É o mesmo que isso:
+console.log(objetoPessoa.animaisEstimacao[0]) // -> "Cachorro"
+console.log(objetoPessoa.renda.emprego) // -> 15000
+
+/**
+ * Veja como podemos ler esse código:
+ * 
+ * linhas 362 e 367 - dentro do objetoPessoa, acesso a propriedade 
+ * animais de estimação e pego o primeiro indice da lista retornada
+ * 
+ * linhas 363 e 368 - dentro do objetoPessoa, acesso a propriedade renda
+ * e acesso a propriedade emprego do objeto retornado
+ */
+
+
+/**
+ * Perceba que temos duas opções, acessar por ponto ( . )
+ * ou pelo nome da propriedade dentro de brackets []
+ */
 
 
 
-//por que de escopo? - Veremos mais pra frente
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+.
+.
+
+/**
+ * Esses foram todos (quase todos) 
+ * os tipos **NÃO PRIMITIVOS**
+ * 
+ * 
+ * Afinal, por que diferenciar primitivos de não primitivos?
+ * 
+ * Bom, no Javascript funciona da seguinte forma:
+ * 
+ * Tipos primitivos: A aplicação guarda o valor da variavel
+ * Tipos nao primitivos: A aplicação guarda uma referencia em memoria
+ * para aquela variavel em especifico.
+ */
