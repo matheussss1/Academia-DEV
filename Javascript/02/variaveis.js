@@ -361,7 +361,6 @@ console.log(objetoPessoa["nome"]) // -> "stags";
 //Isso:
 console.log(objetoPessoa["animaisEstimacao"][0]) // -> "Cachorro"
 console.log(objetoPessoa["renda"]["emprego"]) // -> 15000
-console.log(objetoPessoa["renda"]["emprego"]) // -> 15000
 
 //É o mesmo que isso:
 console.log(objetoPessoa.animaisEstimacao[0]) // -> "Cachorro"
