@@ -44,5 +44,5 @@
  *
  * 21 - Em suas palavras, explique a diferença entre listas e objetos
  * 
- * 22 - Em suas palavras, diferencie tipo de dado de estrutura de dado.
+ * 22 - Em suas palavras, diferencie `tipo de dado` de `estrutura de dado`.
  */

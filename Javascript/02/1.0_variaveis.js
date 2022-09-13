@@ -23,8 +23,8 @@
  *  - Devem começar com uma letra, underscore _ ou sifrão $
  *  - Variaveis são case-sensitive -> nome != Nome
  *  - Algumas palavras não podem ser utilizar por serem reservadas
- *    pela própria linguagem:  
- *    exemplos: true, false, delete https://www.w3schools.com/js/js_reserved.asp
+ *    pela própria linguagem, exemplos: 
+ *    true, false, delete https://www.w3schools.com/js/js_reserved.asp
  */
 
 let nomeVariavel = "teste";
