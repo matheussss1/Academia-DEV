@@ -186,7 +186,7 @@ let listaDeCompras = ["Macarrão", "Feijão", "Sorvete", "Pizza"];
  * os arrays começam a acomodar seus itens no `index` zero (0).
  * 
  * Então a afirmação correta seria, o item "Macarrão" está no index zero (0)!
- * ou então, o item "Pizza" está no index quatro (4)!
+ * ou então, o item "Pizza" está no index três (3)!
  *  
  * 
  * Ok, entendi. Mas afinal pra que serve esse tal de index?
