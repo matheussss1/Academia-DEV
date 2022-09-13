@@ -17,6 +17,14 @@
  * então o nome da variavel
  * e depois a atribuição de valores
  * 
+ * Regras para nomes de variaveis:
+ * 
+ *  - Não podem conter espaços
+ *  - Devem começar com uma letra, underscore _ ou sifrão $
+ *  - Variaveis são case-sensitive -> nome != Nome
+ *  - Algumas palavras não podem ser utilizar por serem reservadas
+ *    pela própria linguagem:  
+ *    exemplos: true, false, delete https://www.w3schools.com/js/js_reserved.asp
  */
 
 let nomeVariavel = "teste";
@@ -250,10 +258,16 @@ console.log(testeDeAcessoEmUmaString[2]) // -> "a"
  * 
  * Ok... posso viver com isso... mas... Por que?
  * 
- * Sabe qual um sinimo para `palavra`?
+ * Beleza, qual a sua definicão para "palavra"?
  * 
- * "Cadeia de caracter"
- * .
+ * Pra mim uma palavra na verdade é uma
+ * 
+ * SEQUENCIA
+ * DE
+ * CARACTERES!
+ * 
+ * consegue ver aonde quero chegar?
+ *
  * .
  * .
  * .
@@ -268,10 +282,9 @@ console.log(testeDeAcessoEmUmaString[2]) // -> "a"
  * na verdade o que temos é `let nome = ["s", "t", "a", "g" ,"s"]`
  * 
  * Mas não se preocupe, isso é coisa que vale mais pro computador
- * do que para nós, programadores. Apenas é bom saber como as coisas 
- * realmente funcionam e entender do motivo de podermos acessar
- * os indexes de uma string.
- * 
+ * do que para nós, programadores.
+ * Apenas é bom saber como as coisas realmente funcionam e 
+ * entender do motivo de podermos acessar os indexes de uma string.
  * 
  * ..... então quer dizer que:
  */
@@ -313,7 +326,7 @@ const objetoPessoa = {
   
   temAlergia: false,
   
-  renda = {
+  renda: {
     emprego: 15000,
     projetoPessoal: 500,
     pensao: 200 
@@ -380,35 +393,47 @@ console.log(objetoPessoa.renda.emprego) // -> 15000
 /**
  * Perceba que temos duas opções, acessar por ponto ( . )
  * ou pelo nome da propriedade dentro de brackets []
- */
-
-
-
-.
-.
-.
-.
-.
-
-.
-.
-.
-.
-.
-.
-.
-.
-
-/**
- * Esses foram todos (quase todos) 
- * os tipos **NÃO PRIMITIVOS**
  * 
+ * com as duas chegamos aos mesmos resultados, ou seja, 
+ * use a que se sentir mais à vontade.
+ * 
+ * 
+ * Esses foram todos (quase todos) os tipos **NÃO PRIMITIVOS**
  * 
  * Afinal, por que diferenciar primitivos de não primitivos?
  * 
  * Bom, no Javascript funciona da seguinte forma:
  * 
  * Tipos primitivos: A aplicação guarda o valor da variavel
+ * 
  * Tipos nao primitivos: A aplicação guarda uma referencia em memoria
  * para aquela variavel em especifico.
+ * 
+ * Por hora esse conceito talvez não faça tanto sentido,
+ * mas deixe esse conteudo na sua cabeça, em algum momento 
+ * você vai falar: "AAAAAA, ENTAO QUER DIZER Q AQUILO É ISSO".
+ * confie em mim.
+ * 
+ * 
+ * Beleza, aprendemos de uma forma geral como declarar variaveis
+ * e utilizar de tipos de estrutura de dados para armazenar valores nelas
+ * antes de seguirmos, vamos ver sobre boas práticas ao declarar variaveis?
+ * 
+ * Nome para variavel:
+ * 
+ *  - De nome extremamente explicítos sobre oq aquela variavel representa.
+ *    Nada de chamar uma variavel que armazena dados de um usuario de "u",
+ *    ou então uma variavel que guarde o modelo de um carro de "mCarro",
+ *    por exemplo. Não tenha medo de usar caractéres, seus colegas de código
+ *    agradecem.
+ * 
+ *  - Siga os padrões da linguagem. Toda linguagem costuma ter padrões,
+ *    e o Javascript não é diferente, o padrão para declaração de varaiveis é
+ *    Calmel Case https://pt.wikipedia.org/wiki/CamelCase .
+ * 
+ *    let nomeUsuario // Correto
+ *    let NomeUsuario // Incorreto
+ *    let nome_usuario // Incorreto
+ * 
+ *  - 
  */
