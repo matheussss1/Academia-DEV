@@ -418,7 +418,15 @@ console.log(objetoPessoa.renda.emprego) // -> 15000
  * 
  * com as duas chegamos aos mesmos resultados, ou seja, 
  * use a que se sentir mais à vontade.
- */
+ * 
+ * Tambem poderiamos representar uma lista de objetos pessoas,
+ * por exemplo: */
+
+const listaDePessoas = [
+  {nome: "pessoa1", peso: 50, estadoCivil: "viúvo"},
+  {nome: "pessoa2", peso: 60, estadoCivil: "casado"},
+  {nome: "pessoa3", peso: 70, estadoCivil: "solteiro"},
+]
 
 /**
  * Vimos arrays e objetos, ok, mas qual o tipo dessas variaveis?

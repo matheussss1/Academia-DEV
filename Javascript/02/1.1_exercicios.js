@@ -34,5 +34,13 @@
  * 
  * 16 - Complete a frase: "Cada item em uma lista ocupa um ........."
  * 
- * 17 - 
+ * 17 - Com qual estrutura de dados podemos representar uma pessoa?
+ * 
+ * 18 - Com qual estrutura podemos representar uma lista de pessoas?
+ * 
+ * 19 - Com as suas palavras, diferencie `propriedade` de `valor`
+ * 
+ * 20 - Como podemos acessar um valor em um objeto?
+ *
+ * 21 - Em suas palavras, explique a diferença entre listas e objetos
  */
