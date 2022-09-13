@@ -66,6 +66,12 @@ var texto = "redeclarando variavel";
  * Colocamos as aspas duplas "", que também poderiam ser aspas simples ''
  * então o conteudo do texto, na programação chamamos isso de tipo `string`
  * 
+ * veja por você mesmo:
+ */
+
+console.log(typeof texto) // -> "string"
+ 
+ /*
  * Mas também possuimos outros tipos, como o tipo `number`
  * mais conhecido como `int` em outras linguagens
  * 
@@ -73,6 +79,9 @@ var texto = "redeclarando variavel";
  */
 
 let numero = 20;
+
+console.log(typeof numero) // -> "number"
+
 let ano = 2022;
 let idade = 21;
 
@@ -86,9 +95,13 @@ idade = 50;
 
 let animoParaIrPraAcademia = -40;
 
+console.log(typeof animoParaIrPraAcademia) // -> "number"
+
 // e numeros com pontos flutuantes:
 
 let grauMiopia = 5.25;
+
+console.log(typeof grauMiopia) // -> "number"
 
 /**
  * Temos também o tipo boleano, ou boolean em ingles
@@ -99,6 +112,9 @@ let verdadeiro = true;
 let falso = true;
 
 let anoJaAcabou = false;
+
+console.log(typeof anoJaAcabou) // -> "boolean"
+
 let brasilTrouxeACopa = false;
 let peleMelhorQueMaradona = true;
 
@@ -109,6 +125,8 @@ let peleMelhorQueMaradona = true;
  */
 
 let jatinhoParticular = null;
+
+console.log(typeof jatinhoParticular) // -> null
 
 /**
  * Preparado para confundir a cabeça?
@@ -124,6 +142,7 @@ let jatinhoParticular = null;
 let variavelSemValor;
 
 console.log(variavelSemValor) // -> undefined
+console.log(typeof variavelSemValor) // -> undefined
 
 /**
  * Até agora conhecemos todos (ou quase todos) 
@@ -434,6 +453,8 @@ console.log(objetoPessoa.renda.emprego) // -> 15000
  *    let nomeUsuario // Correto
  *    let NomeUsuario // Incorreto
  *    let nome_usuario // Incorreto
+ * 
+ *    Mais sobre padrões: https://www.robinwieruch.de/javascript-naming-conventions/
  * 
  *  - 
  */
