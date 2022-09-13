@@ -2,12 +2,12 @@
 
  ## O que é Javascript?
 
-Javascript, comumente abreviado como `JS`, é a linguagem de programação consideradada como uma das principais tecnologias da Web, junto com HTML e CSS, nos possíbilitando adicionar interatividade com as páginas.  
+Javascript, comumente abreviado como `JS`, é a linguagem dinamicamente tipada de programação consideradada como uma das principais tecnologias da Web, junto com HTML e CSS, nos possíbilitando adicionar interatividade com as páginas.  
 Os programas escritos em Javascript são chamados de `scripts`, podem ser escritos diretamente no `HTML` da página e roda assim que a página carrega.
 
 #### Por que é chamado *Java*script?
 Quando Javascript foi criado, inicialmente se chamava `LiveScript`. Mas como o `Java` na época era bem famoso, decidiram que se chamaria **Java**script para ganhar popularidade com o nome.
-_**Java e Javascript são linguagens totalmente diferentes!**_. 
+_**Java e Javascript são linguagens totalmente diferentes !**_. 
 
 ## Executando Javascript
 Nos dias de hoje Javascript pode executar não somente em browsers, mas também em servidores, ou qualquer dispositivo que tenha uma [**Engine Javascript**](https://acervolima.com/o-que-acontece-dentro-do-javascript-engine/).
@@ -48,3 +48,15 @@ Na minha opinião, as 3 melhores coisas do Javascript são:
 - Suportado por todos os Browsers e habilidade por padrão.
 
 Javascript é a única tecnologia que combina essas 3 coisas, além de servir para criar qualquer tipo de aplicação, seja ela mobile ([React Native](https://reactnative.dev)), desktop ([Electron](https://www.electronjs.org)) ou Web.
+
+## ECMAScript?
+
+O JavaScript foi criado em 1995 por Brendan Eich, enquanto ele trabalhava no Netscape.  
+No ano de 1996, com o objetivo de padronizar a linguagem recém criada, a Netspace decidiu juntar o JavaScript à ECMA International. A ECMA (Associação Europeia dos Fabricantes de Computadores) é uma associação que realiza a especificação ou padronização de sistemas da informação.  
+Com essa junção, foi criado um novo padrão de linguagem, que foi batizado com a união das palavras `ECMA` e `JavaScript`, resultando no nome `ECMAScript`. Desde esse ano, as duas tecnologias andam juntas. Na realidade, ECMAScript é o nome oficial da tecnologia. Entretanto, o nome JavaScript “caiu nas graças da torcida”, que no caso é a comunidade de desenvolvedores, e até hoje a linguagem é mais conhecida por esse nome.  
+
+## Versões Javascript
+
+Por conta do Javascript fazer parte da ECMA International, toda vez que é lançada uma nova feature, essa feature existe apenas como `referencia` e cabe as engines implementarem as novas funcionalidades, por exemplo, se forem lançados novas funcionalidades à linguagem, cabe a engine implementar ela, no caso do browser `Chrome`, caberia ao `V8` implementar essa nova funcionalidade. Mas também é possível que você utilize um compilador, como por exemplo o [**(babel)**](https://babeljs.io) para que ele aceite a funcionalidade nova e transforme de um jeito que qualquer engine javascript mais antiga consiga entender, mantendo assim a compatibilidade em browsers antigos, por exemplo.
+
+Para mais informações sobre versões de ECMAScript: [veja esse link.](https://www.educative.io/blog/javascript-versions-history)
