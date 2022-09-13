@@ -39,7 +39,7 @@ const outraVariavel2 = "outra varialvel";
  * Hoje oq vc precisa aprender é:
  * 
  * var não é recomendado de se utilizar
- * porem é uma variavel que age de forma global (ignorando escopo, veremos mais pra frente)
+ * porem é uma variavel que age de forma global (ignorando escopo de bloco, veremos mais pra frente)
  * pode iniciar indefinida, pode ser redeclarada e seu valor pode ser alterado. 
  * 
  * utilize apenas let e const
@@ -418,7 +418,24 @@ console.log(objetoPessoa.renda.emprego) // -> 15000
  * 
  * com as duas chegamos aos mesmos resultados, ou seja, 
  * use a que se sentir mais à vontade.
- * 
+ */
+
+/**
+ * Vimos arrays e objetos, ok, mas qual o tipo dessas variaveis?
+ */
+
+console.log(typeof {}) // -> object
+console.log(typeof []) // -> object
+
+//Ambos são objetos????????
+
+/**
+ * Entenderemos mais posteriormente, apenas mantenha na sua cabeça
+ * que em javascript arrays e objetos tem o tipo como object
+ *
+ */
+
+/* 
  * 
  * Esses foram todos (quase todos) os tipos **NÃO PRIMITIVOS**
  * 
@@ -479,5 +496,11 @@ console.log(objetoPessoa.renda.emprego) // -> 15000
  *    - Escopo global:
  *
  *      Variaveis declaradas no corpo no script serão acessíveis por todo mundo.  
+ * 
+ * 
+ * 
+ * Ok... Isso é (quase) tudo que você precisa saber sobre variaveis.
+ * 
+ * Vamos ao exercícios:
  */ 
 
