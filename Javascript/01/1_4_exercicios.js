@@ -63,5 +63,5 @@
  * 
  * 31 - Como podemos assinar variaveis através de descontrução? descreva todas as formas possíveis
  * 
- * 32 - Como podemos renomar variaveis desconstruidas?
+ * 32 - Como podemos renomear variaveis desconstruidas?
  */
