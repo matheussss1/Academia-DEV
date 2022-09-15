@@ -5,8 +5,8 @@
  * 
  * Todo mundo sabe pra que serve variaveis dentro do nosso código?
  * 
- * explicação segundo o Google: São importantes pois elas armazenam temporariamente ou em definitivo, valores que são
- * manipulados durante a execução do programa.
+ * explicação segundo o Google: São importantes pois elas armazenam temporariamente ou em definitivo,
+ * valores que são manipulados durante a execução do programa.
  * 
  * É basicamente pra isso, tudo que precisamos armazenar para escrevermos nosso código,
  * será armazenado em variaveis.
@@ -27,8 +27,8 @@
  *    true, false, delete https://www.w3schools.com/js/js_reserved.asp
  */
 
-let nomeVariavel = "teste";
 var outraVariavel = "variavel"
+let nomeVariavel = "teste";
 const outraVariavel2 = "outra varialvel";
 
 /**
@@ -38,9 +38,9 @@ const outraVariavel2 = "outra varialvel";
  * 
  * Hoje oq vc precisa aprender é:
  * 
- * var não é recomendado de se utilizar
+ * var não é recomendado de se utilizar...
  * porem é uma variavel que age de forma global (ignorando escopo de bloco, veremos mais pra frente)
- * pode iniciar indefinida, pode ser redeclarada e seu valor pode ser alterado. 
+ * pode iniciar indefinidamente, pode ser redeclarada e seu valor pode ser alterado. 
  * 
  * utilize apenas let e const
  * 
@@ -58,9 +58,7 @@ var texto = "redeclarando variavel";
 /**
  * Perceba que eu posso redeclarar essa variável.
  * Não parece ser uma boa prática né?
- */
 
-/**
  * Ok, embora não seja uma boa prática, 
  * para a variavel texto, atribuimos um conteudo do tipo texto, certo?
  * Colocamos as aspas duplas "", que também poderiam ser aspas simples ''
@@ -70,6 +68,26 @@ var texto = "redeclarando variavel";
  */
 
 console.log(typeof texto) // -> "string"
+
+/**
+ * É possível `concatenar strings` no javascript, 
+ * tradução prática pra isso? Combinar textos!
+ */
+
+let nome = "Stags";
+let sobrenome = "Boladão";
+
+let nomeCompleto = nome + " " + sobrenome;
+
+let nomeCompletoComEstilo = `${nome} ${sobrenome}`;
+
+let idadeStags = 21;
+
+let nomeEIdade = nome + ", idade: " + idade;
+
+//A idade também é convertida para string?? //perguntar.
+
+let nomeEIdadeComEstilo = `${nome}, idade: ${idade}`;
  
  /*
  * Mas também possuimos outros tipos, como o tipo `number`
@@ -103,6 +121,7 @@ let grauMiopia = 5.25;
 
 console.log(typeof grauMiopia) // -> "number"
 
+
 let numeroInfinito = Infinity; // -> representação do infinito
 
 
@@ -121,9 +140,10 @@ console.log(typeof anoJaAcabou) // -> "boolean"
 let brasilTrouxeACopa = false;
 let peleMelhorQueMaradona = true;
 
+let lolMelhorQueDota = true;
+
 /**
- * É possível declarar que um valor para indicar que não existe valor,
- * meio confuso né? mas é isso mesmo, null é um tipo que representa *não há valor*.
+ * É possível representar a inexistencia de valor, null é um tipo que representa *não há valor*.
  * note que apesar de ser um tipo, ele também pode ser utilizado como valor: 
  */
 
@@ -132,9 +152,8 @@ let jatinhoParticular = null;
 console.log(typeof jatinhoParticular) // -> null
 
 /**
- * Preparado para confundir a cabeça?
- * Temos o tipo undefined (que também pode ser utilizado como valor XD )
- * que representa que uma variavel não foi inicializada
+ * Temos o tipo undefined que representa que uma variavel não foi inicializada
+ * também é um tipo que pode ser utilizado como valor.
  * 
  * perceba a diferença:
  * 
@@ -164,7 +183,6 @@ let listaDeComprasErrada = "Macarrao Feijao Sorvete Pizza";
  * Olha, de uma certa forma estamos armazenando
  * mas existe uma estrutura de dados criada especificamente
  * para lidar com listas, chamada `array`
- * 
  */
 
 let listaDeCompras = ["Macarrão", "Feijão", "Sorvete", "Pizza"];
@@ -199,11 +217,9 @@ let listaDeCompras = ["Macarrão", "Feijão", "Sorvete", "Pizza"];
  * Perceba oq acontece ao dar `console.log` na variavel `listaDeCompras`:
  */
 
-console.log(listaDeCompras) // -> ["Macarrão", "Feijão", "Sorvete", "Pizza"];
+console.log(listaDeCompras) // -> ["Macarrão", "Feijão", "Sorvete", "Pizza"]; Temos o retorno da lista inteira
 
-// Temos o retorno da lista inteira
-
-console.log(listaDeCompras[0]) // -> "Macarrão"
+console.log(listaDeCompras[0]) // -> "Macarrão"; Temos o retorno de apenas um item
 
 /**
  * Atenção para a sintaxe:
@@ -212,13 +228,12 @@ console.log(listaDeCompras[0]) // -> "Macarrão"
  * [0] -> brackets ([]) e um numero (index), representa o acesso
  * ao item de index 0 dentro de uma lista
  * 
- * 
  * Consegue entender agora o por que de usarmos uma lista e não uma string
  * para armazenar diversas informações?
  * 
  * Programação é sobre isso, as vezes podemos até fazer algo funcionar
  * mas pode ser que não estejamos fazendo da forma correta.
- * 
+ *
  * 
  * No exemplo anterior utilizamos apenas itens do tipo string
  * para colocar dentro do array.
@@ -297,7 +312,7 @@ console.log(testeDeAcessoEmUmaString[2]) // -> "a"
  * 
  * Vou te contar um segredo:
  * 
- * Strings são arrays.... PRONTO FALEI!
+ * Strings meio que são arrays
  * 
  * imagine que ao declarar `let nome = "stags"`
  * 
@@ -316,6 +331,32 @@ let matrizString = ["stags", "teste"];
 console.log(matrizString[0][2]) // -> "a"
 
 // é, eu sei. programação né!
+
+/**
+ * É possível conferir o tamanho dessa lista com
+ */
+
+console.log(matrizString.length); // -> 2;
+
+/**
+ * é possível adicionar itens ao final da lista com 
+ */
+
+ matrizString.push("novo item");
+
+ /**
+  * é possível adicionar itens ao começo da lista com 
+ */
+
+  matrizString.unshift("novo item");
+
+  /** é possível remover elementos do começo */
+
+  matrizString.shift("novo item");
+  
+  /** é possível remover elementos do final da lista */
+  
+  matrizString.pop("novo item");
 
 /**
  * Ok, já entendemos bem sobre listas
@@ -355,8 +396,6 @@ const objetoPessoa = {
   }
 
 };
-
-
 
 /**
  * Consegue perceber?
@@ -403,24 +442,20 @@ console.log(objetoPessoa["renda"]["emprego"]) // -> 15000
 console.log(objetoPessoa.animaisEstimacao[0]) // -> "Cachorro"
 console.log(objetoPessoa.renda.emprego) // -> 15000
 
-/**
- * Veja como podemos ler esse código:
- * 
- * linhas 397 e 402 - dentro do objetoPessoa, acesso a propriedade 
- * animais de estimação e pego o primeiro indice da lista retornada
- * 
- * linhas 401 e 398 - dentro do objetoPessoa, acesso a propriedade renda
- * e acesso a propriedade emprego do objeto retornado
- */
+/** é possivel adicionar mais propriedades ao objeto */
+
+objetoPessoa.professor = true;
+
+objetoPessoa.bomProfessor = "fica a duvida";
+
+
+objetoPessoa.nome = "Matheus";
+//Assinei uma propriedade existente e ele sobreescreveu o valor pra mim.
+
+delete objetoPessoa.filhos; // remove a propriedade filhos do objeto
 
 
 /**
- * Perceba que temos duas opções, acessar por ponto ( . )
- * ou pelo nome da propriedade dentro de brackets []
- * 
- * com as duas chegamos aos mesmos resultados, ou seja, 
- * use a que se sentir mais à vontade.
- * 
  * Tambem poderiamos representar uma lista de objetos pessoas,
  * por exemplo: */
 
@@ -437,15 +472,13 @@ const listaDePessoas = [
 console.log(typeof {}) // -> object
 console.log(typeof []) // -> object
 
-//Ambos são objetos????????
+/**
+ * Ambos são objetos????????
+ * 
+ * link para referencia: https://stackoverflow.com/questions/9108925/how-is-almost-everything-in-javascript-an-object
+ **/
 
 /**
- * Entenderemos mais posteriormente, apenas mantenha na sua cabeça
- * que em javascript arrays e objetos tem o tipo como object
- *
- */
-
-/* 
  * 
  * Esses foram todos (quase todos) os tipos **NÃO PRIMITIVOS**
  * 
@@ -464,8 +497,9 @@ console.log(typeof []) // -> object
  * confie em mim.
  * 
  * Beleza, aprendemos de uma forma geral como declarar variaveis
- * e utilizar de tipos de estrutura de dados para armazenar valores nelas
- * antes de seguirmos, vamos ver sobre boas práticas ao declarar variaveis?
+ * e utilizar de tipos de estrutura de dados para armazenar valores nelas.
+ * 
+ * Antes de seguirmos, vamos ver sobre boas práticas ao declarar variaveis?
  * 
  * Nome para variavel:
  * 
