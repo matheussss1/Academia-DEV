@@ -378,7 +378,7 @@ Manter essas informações localmente acelera o processo de busca, porque você 
 Então é comum que antes de instalar um programa específico, por exemplo o docker, você tenha que instalar o repositório aonde o docker está, veja um exemplo da própria documentação do docker:
 <img src="./images/repositorio_docker.png" alt=""/>
 
-<h1>Mais sobre usuários e grupos
+<h1>Mais sobre usuários e grupos</h1>
 
 Em um servidor, é muito comum que vários funcionários tenham acesso ao mesmo, e com isso, precisamos de diferentes usuários com diferentes permissões. Mas como criamos um novo usuário utilizando linha de comando? Simples: utilizamos o comando `useradd` seguido do nome que desejamos dar ao usuário, por exemplo: `useradd Linus` , e assim temos um novo usuário registrado nessa máquina. 
 Porém, devemos tomar nota de duas coisas:
