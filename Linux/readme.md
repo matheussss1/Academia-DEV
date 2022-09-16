@@ -377,3 +377,40 @@ Manter essas informações localmente acelera o processo de busca, porque você 
 
 Então é comum que antes de instalar um programa específico, por exemplo o docker, você tenha que instalar o repositório aonde o docker está, veja um exemplo da própria documentação do docker:
 <img src="./images/repositorio_docker.png" alt=""/>
+
+<h1>Mais sobre usuários e grupos
+
+Em um servidor, é muito comum que vários funcionários tenham acesso ao mesmo, e com isso, precisamos de diferentes usuários com diferentes permissões. Mas como criamos um novo usuário utilizando linha de comando? Simples: utilizamos o comando `useradd` seguido do nome que desejamos dar ao usuário, por exemplo: `useradd Linus` , e assim temos um novo usuário registrado nessa máquina. 
+Porém, devemos tomar nota de duas coisas:
+
+​	1 - Esse usuário ainda não tem uma senha cadastrada
+
+​	2 - Esse usuário não possui um _shell_ definido
+
+Para definir a senha do usuário _Linus_ usamos o comando `passwd Linus` e o terminal irá pedir a senha que desejamos dar ao usuário. Simples, não?
+
+Agora para que o usuário tenha acesso aos comandos que utilizamos e que esses comandos sejam devidamente interpretados pelo terminal, precisamos definir o Shell do usuário, para isso, o mais comum é utilizarmos o Bash, que é o Shell padrão do Linux ubuntu. Então, é extremamente necessário que executemos o comando `chsh -s /bin/bash Linus` para que nosso querido Linus consiga utilizar devidamente os comandos do Linux.
+
+
+
+Além dos usuários, temos os grupos que já foram abordados antes, mas afinal o que são os grupos? 🤔 São basicamente conjuntos de usuários, podemos classificar os usuários em grupos por questões de segurança (permissões por grupo nos diretórios) ou por simples organização.
+
+Para criarmos um grupo, podemos usar o comando `groupadd [nome do grupo]` , por exemplo, `groupadd desenvolvedores` dessa forma, criamos o grupo "desenvolvedores", e podemos conferir o grupo utilizando o comando `cat /etc/group`. Ah, também vale lembrar que um usuário pode participar de vários grupos ao mesmo tempo
+
+Por padrão, os grupos que são criados manualmente, são criados vazios, sem nenhum usuário adicionado, então, se quisermos adicionar nosso querido Linus no grupo dos desenvolvedores, executamos a seguite linha de comando:
+
+`useradd Linus -G desenvolvedores`
+
+ou
+
+`usermod -g desenvolvedores Linus`
+
+É importante ressaltar que apenas o usuário root, ou usuários com acesso ao `sudo` (também chamados de sudoers) podem adicionar usuários aos grupos.
+
+Ok, tudo tranquilo até aqui... mas vamos supor que o Linus tenha derrubado café no computador da empresa e foi demitido 😲, e agora, como excluímos o usuário dele da máquina em questão?
+
+Para isso, utilizamos o comando `userdel -r Linus`, dessa forma, removemos o usuário da máquina e também o diretório home dele.
+
+Agora,   vamos supor que o Linus não tenha derramado o café no PC, apenas tenha decidido mudar de setor e ir para a equipe de suporte, como tiramos ele do grupo desenvolvedores?
+
+Bem, executando o comando `gpasswd -d Linus desenvolvedores` fazemos isso com facilidade, e agora o Linus não faz mais parte do grupo dos desenvolvedores.
