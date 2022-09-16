@@ -39,7 +39,9 @@
 
 /**
  * Até agora vimos a transformação de String para Number e vice-versa.
- * Como sabemos, temos o tipo boolean, então deve ter
+ * 
+ * 
+ * Veremos agora a conversão de tipo booleano
  */
 
  

@@ -55,3 +55,47 @@ if (condicaoFalse) {
 }
 
 console.log(semEscopo) // undefined
+
+/**
+ * Em JavaScript, um valor truthy é um valor que se traduz em verdadeiro 
+ * quando avaliado em um contexto Booleano. 
+ * Todos os valores são truthy a menos que eles sejam definidos como 
+ * falsy (ou seja., exceto para false, 0, "", null, undefined, e NaN).
+ * 
+ * Um valor falsy é um valor que se traduz em falso quando avaliado em um contexto Boolean.
+ * 
+ *  
+    if (true)
+    if ({})
+    if ([])
+    if (42)
+    if ("foo")
+    if (new Date())
+    if (-42)
+    if (3.14)
+    if (-3.14)
+    if (Infinity)
+    if (-Infinity)
+
+
+    if (false)
+    if (null)
+    if (undefined)
+    if (0)
+    if (NaN)
+    if ('')
+ */
+
+    if ("" && "stags") {}
+
+    if (false && true) {}
+
+    if (false) {} // nao vai entrar
+
+
+    if ("stags" && "") {}
+
+    if (true && false) {}
+
+    if (false) {} // nao vai entrar
+

@@ -115,11 +115,12 @@
  * 21 - Em suas palavras, explique a diferença entre listas e objetos
  * 
  *  Listas armazenam valores indexaveis, porem sem muita descrição do seu conteudo
- *  Objetos por sua vez, utilizam o sistema de chave/valor, assim podemos ter uma 
+ *  Objetos por sua vez, utilizam o sistema de (chave/propriedade)/valor, assim podemos ter uma 
  *  descrição maior do que aquele dado representa
  * 
  * 22 - Como podemos adicionar um item ao final de um array?
- * 
+ *  
+ *  const list = [];
  *  list.push(item)
  * 
  * 23 - Como setamos novas propriedades para objetos?
@@ -200,5 +201,4 @@
  *  const {sobrenome : outroNomeParaSobreNome} = obj;
  *  // sobrenome fica indisponivel de acessar
  *  // outroNomeParaSobreNome fica disponivel para acesso
- * 
  */

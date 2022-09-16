@@ -120,81 +120,42 @@ n ** 4 // n === 16
    && - (E lógico) - Retorna expr1 caso possa ser convertido para falso; senão, retorna expr2.
    Assim, quando utilizado com valores booleanos, && retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.
  
-   || - (OU lógico) - Retorna expr1 caso possa ser convertido para verdadeiro; senão, retorna expr2. Assim, quando utilizado com valores booleanos, || retorna verdadeiro caso ambos os operandos sejam verdadeiro; se ambos forem falsos, retorna falso.
+   || - (OU lógico) - Retorna expr1 caso possa ser convertido para verdadeiro;
+   senão, retorna expr2. Assim, quando utilizado com valores booleanos, || retorna verdadeiro caso ambos os 
+   operandos sejam verdadeiro; se ambos forem falsos, retorna falso.
   
-   ! - (NEGAÇÃO lógica) - Retorna falso caso o único operando possa ser convertido para verdadeiro; senão, retorna verdadeiro.
+   ! - (NEGAÇÃO lógica) - Retorna falso caso o único operando possa ser 
+   convertido para verdadeiro; senão, retorna verdadeiro.
 
    exemplos:
  */
 
-true || true;       // t || t retorna true
+true || true;       // retorna true
 
-false || true;      // f || t retorna true
+false || true;      // retorna true
 
-true || false;      // t || f retorna true
+true || false;      // retorna true
 
-false || (3 == 4);  // f || f retorna false
+false || (3 == 4);  // retorna false
 
-"Gato" || "Cão";    // t || t retorna Gato
+"Gato" || "Cão";    // retorna Gato
 
-false || "Gato";    // f || t retorna Gato
-"Gato" || false;    // t || f retorna Gato
+false || "Gato";    // retorna Gato
+"Gato" || false;    // retorna Gato
 
-true && true;       // t && t retorna true
-true && false;      // t && f retorna false
-false && true;      // f && t retorna false
-false && (3 == 4);  // f && f retorna false
-"Gato" && "Cão";    // t && t retorna Cão
-false && "Gato";    // f && t retorna false
-"Gato" && false;    // t && f retorna false
+true && true;       // retorna true
+true && false;      // retorna false
+false && true;      // retorna false
+false && (3 == 4);  // retorna false
+"Gato" && "Cão";    // retorna Cão
+false && "Gato";    // retorna false
+"Gato" && false;    // retorna false
 
 !true;              // !t retorna false
 !false;             // !f retorna true
+!!false;             // !!f retorna false
 !"Gato";            // !t retorna false
-
-
-/**
- * Em JavaScript, um valor truthy é um valor que se traduz em verdadeiro 
- * quando avaliado em um contexto Booleano. 
- * Todos os valores são truthy a menos que eles sejam definidos como 
- * falsy (ou seja., exceto para false, 0, "", null, undefined, e NaN).
- * 
- * Um valor falsy é um valor que se traduz em falso quando avaliado em um contexto Boolean.
- * 
- *  
-    if (true)
-    if ({})
-    if ([])
-    if (42)
-    if ("foo")
-    if (new Date())
-    if (-42)
-    if (3.14)
-    if (-3.14)
-    if (Infinity)
-    if (-Infinity)
-
-
-    if (false)
-    if (null)
-    if (undefined)
-    if (0)
-    if (NaN)
-    if ('')
- */
-
-    if ("" && "stags") {}
-
-    if (false && true) {}
-
-    if (false) {} // nao vai entrar
-
-
-    if ("stags" && "") {}
-
-    if (true && false) {}
-
-    if (false) {} // nao vai entrar
+!!"Gato";            // !!t retorna true
 
 
 /**
