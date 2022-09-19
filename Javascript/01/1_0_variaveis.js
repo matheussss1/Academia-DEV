@@ -48,8 +48,11 @@ const outraVariavel2 = "outra varialvel";
  * seu valor pode ser trocado.
  * 
  * const, variavel que não pode iniciar undefined. não pode ser redeclarada e 
- * seu valor nao pode ser trocado.
+ * seu valor não pode ser trocado.
  * 
+ * por padrão, quando utiizamos variáveis let e const, ambas devem ser escritas no padrão camelCase
+ * que á a prática de escrita onde cada palavra é iniciada com maiúsculas(Por convenção a inicial
+ * pode ser tratada como minúscula) e unidas sem espaços.
  */
 
 var texto = "texto teste";
@@ -511,7 +514,9 @@ console.log(typeof []) // -> object
  * 
  *  - Siga os padrões da linguagem. Toda linguagem costuma ter padrões,
  *    e o Javascript não é diferente, o padrão para declaração de varaiveis é
- *    Calmel Case https://pt.wikipedia.org/wiki/CamelCase .
+ *    Calmel Case, que á a prática de escrita onde cada palavra é iniciada com
+ *    maiúsculas(Por convenção a inicial também ser tratada como minúscula) e unidas
+ *    sem espaços. https://pt.wikipedia.org/wiki/CamelCase
  * 
  *    let nomeUsuario // Correto
  *    let NomeUsuario // Incorreto
