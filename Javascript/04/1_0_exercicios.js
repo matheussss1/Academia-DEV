@@ -21,7 +21,7 @@
  *     [0-25], [26-50], [51-75] e [76-100].
  *     A entrada de dados deve terminar quando for lido um número negativo.
  * 
- * 7 - Faça um programa que funcione como uma calculadora.
+ * 6 - Faça um programa que funcione como uma calculadora.
  * O Programa deve apresentar um menu ao usuário da seguinte forma:
  * 
  *  1 - Somar
@@ -32,6 +32,6 @@
  * 
  * Ao escolher uma opção peça dois numeros e realize a operação
  * 
- * 6 - Faça um jogo da velha em javascript no terminal
+ * 7 - Faça um jogo da velha em javascript no terminal
  * 
  */
