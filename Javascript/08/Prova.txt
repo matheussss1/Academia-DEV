@@ -1,0 +1,55 @@
+1 - Faça uma função que mostre quantos digitos tem em um numero inserido pelo usuario
+
+2 - Dado uma lista preenchida com uma sequencia de 0 até 1000, separe os valores impares e pares em duas listas.
+
+3 - Dado a lista de objetos em 'listaObjetos.json', crie uma função que receba uma lista e um intervalo de valores, 
+e que então devolva uma nova lista composta apenas dos objetos cujo Valor esteja dentro do intervalor fornecido:
+
+4 - Escreva uma função que, substitua todas as instâncias de uma letra arbitrária dessa questão por outra letra arbitrária.
+
+5 - Colete a soma dos valores pares e impares, cada um em sua própria variável, dos itens da questão 3.
+
+6 - Remova desta questão tudo o que não é consoante.
+
+7 - Crie uma função que recebe uma string, e peça para o usuário quão muito eles desejam encurtar ela.
+
+8 - Mostre os resultados de aplicar operações aritiméticas básicas entre duas strings.
+
+9 - Usando loops, peça do usuário uma lista de compras contendo nome do produto e valor e no final apresente a lista e o total dos itens.
+
+10 - Escreva uma função que recebe um número N e então devolve a sequência de fibonacci até N sequêncial.
+
+11 - Escreva um algoritmo que simule um caixa eletronico
+
+12 - Dado a seguinte lista de pessoas em 'pessoas.json'
+
+Imprima:
+
+- Media de idade entre as pessoas
+- Peso medio entre as faixas etarias:
+
+    0 - 25
+    25 - 50
+    50 +
+
+- A cidade que mais apareceu na lista
+- A cidade que menos apareceu na lista
+- A quantidade de pessoas que possuem o signo de Sagitário na lista
+- O tipo sanguineo que mais aparece na lista
+
+E então separe em duas listas homens e mulheres, com apenas as pessoas que moram em blumenau, com os seguintes campos:
+
+- Nome
+- idade
+- Sexo
+- Peso
+- CPF (Sem formatação)
+- telefone (Sem formatação)
+
+
+13 - Dado a seguinte lista de numeros em 'numeros.json', mostre a quantidade de numeros repetidos na lista
+
+14 -  Faça um algoritmo para ler 10 números e armazenar em um vetor. Após isto, o algoritmo deve
+ordenar os números no vetor em ordem crescente. Escrever o vetor ordenado. 
+
+15 - Faça uma função que cheque se uma palavra é um palindromo
