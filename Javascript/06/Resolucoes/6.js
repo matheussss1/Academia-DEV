@@ -1,0 +1,1 @@
+// Para parar a execução de um bloco de código, retornando valores ou nada
